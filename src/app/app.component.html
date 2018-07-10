@@ -1,0 +1,18 @@
+<div class="col-md-6 col-md-offset-3 pizzarra">
+  <h1 class="text-center">
+    {{title}}
+  </h1>
+
+  <div class="row columns">
+    <div class="col-xs-8 col-xs-offset-2">
+         <input class="block-certer" type="text" placeholder="What are you going to buy?" (keyup.enter)="Send($event.target.value)" [(ngModel)]="msgVal" />
+    </div>
+
+    <div id="details-container">
+        <div *ngFor="let item of items | async" class="item">
+          <img src="https://s-media-cache-ak0.pinimg.com/originals/86/23/31/862331909df46ee60f804401f03de977.png">
+          <span>{{item.item}}</span>
+        </div>
+    </div>
+  </div>
+</div>
